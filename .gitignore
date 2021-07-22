@@ -1,0 +1,4 @@
+build.ps1
+psake.ps1
+testingpsake.ps1
+.vs
