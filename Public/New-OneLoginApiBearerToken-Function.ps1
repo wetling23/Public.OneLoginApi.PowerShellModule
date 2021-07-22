@@ -7,6 +7,7 @@ Function New-OneLoginApiBearerToken {
             Author: Mike Hashemi
             V1.0.0.0 date: 13 July 2021
                 - Initial release
+            V1.0.0.1 date: 22 July 2021
         .LINK
             https://github.com/wetling23/Public.OneLoginApi.PowerShellModule
         .PARAMETER ClientId
@@ -67,7 +68,7 @@ Function New-OneLoginApiBearerToken {
         $message = ("{0}: Unexpected error retrieving bearer token. Error: {1}" -f ([datetime]::Now).ToString("yyyy-MM-dd`THH:mm:ss"), $_.Exception.Message)
         If ($EventLogSource -and (-NOT $LogPath)) { Out-PsLogging -EventLogSource $EventLogSource -MessageType Error -Message $message } ElseIf ($LogPath -and (-NOT $EventLogSource)) { Out-PsLogging -LogPath $LogPath -MessageType Error -Message $message } Else { Out-PsLogging -ScreenOnly -MessageType Error -Message $message }
 
-        Exit 1
+        Return "Error"
     }
 
     If ($response.'access_token'.Length -gt 1) {
@@ -82,7 +83,7 @@ Function New-OneLoginApiBearerToken {
         $message = ("{0}: No bearer token retrieved." -f ([datetime]::Now).ToString("yyyy-MM-dd`THH:mm:ss"))
         If ($EventLogSource -and (-NOT $LogPath)) { Out-PsLogging -EventLogSource $EventLogSource -MessageType Error -Message $message } ElseIf ($LogPath -and (-NOT $EventLogSource)) { Out-PsLogging -LogPath $LogPath -MessageType Error -Message $message } Else { Out-PsLogging -ScreenOnly -MessageType Error -Message $message }
 
-        Exit 1
+        Return "Error"
     }
     #endregion generate oauth token
-} #V1.0.0.0
+} #V1.0.0.1
