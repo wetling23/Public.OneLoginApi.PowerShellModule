@@ -1,4 +1,4 @@
-Function Add-EventLogSource {
+Function Add-OneLoginApiEventLogSource {
     <#
         .DESCRIPTION
             Adds an Event Log source, for script/module logging. Adding an Event Log source requires administrative rights.

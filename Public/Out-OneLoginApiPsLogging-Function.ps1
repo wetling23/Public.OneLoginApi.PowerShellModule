@@ -1,4 +1,4 @@
-Function Out-PsLogging {
+Function Out-OneLoginApiPsLogging {
     <#
         .DESCRIPTION
             Logging function, for host, event log, or a log file.
