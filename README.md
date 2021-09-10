@@ -11,6 +11,9 @@ This project is also published in the PowerShell Gallery at https://www.powershe
 Authentication is done by generating an OAUTH token. See [OneLogin documentation](https://developers.onelogin.com/api-docs/1/getting-started/working-with-api-credentials) for more information
 
 # Behavior changes
+## 1.0.0.5
+- Out-PsLogging
+  - Prepending [INFO], [WARNING], [ERROR], [VERBOSE] blocks before each message.
 ## 1.0.0.0
 - Initial release.
 
