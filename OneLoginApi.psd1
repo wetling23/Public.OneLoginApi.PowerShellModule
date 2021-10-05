@@ -91,7 +91,7 @@
             # LicenseUri = ''
 
             # A URL to the main website for this project.
-            ProjectUri   = 'ttps://github.com/wetling23/Public.OneLoginApi.PowerShellModule'
+            ProjectUri   = 'https://github.com/wetling23/Public.OneLoginApi.PowerShellModule'
 
             # A URL to an icon representing this module.
             # IconUri = ''
